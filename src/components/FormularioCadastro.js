@@ -1,15 +1,24 @@
 import React from 'react';
-import FormularioCadastroStyled from '../styles/FormularioCadastroStyle';
+import { Button, TextField } from '@mui/material/';
+import { FormularioCadastroStyled, Div, Titulo } from '../styles/FormularioCadastroStyle';
 
 export function FormularioCadastro() {
     return (
-        <div>
+        <Div>
             <FormularioCadastroStyled>
-                <input type="text" placeholder="Título" />
-                <textarea placeholder="Escreva sua nota..." />
-                <button>Criar Nota</button>
+                <Titulo>Cadastro de Produtos</Titulo>
+                <TextField
+                    label="Nome" style={{margin: '0rem 0rem 1rem 0', fontSize: '400px'}} type='text'
+                />
+                <TextField
+                    label="Preco" style={{margin: '0rem 0rem 1rem 0'}} type='number'
+                />
+                <TextField
+                    label="Peso" style={{margin: '0rem 0rem 1rem 0' }} type='number' 
+                />
+                <Button variant="contained" color="success">Cadastrar</Button>
             </FormularioCadastroStyled>
-        </div>
+        </Div>
     );
 }
 
